@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD Tofazzal Hosein | PHP &amp; MySQL Web Developer</title>
+<meta name="description" content="Freelance PHP and MySQL web developer. Custom websites, admin panels, login systems and bug fixes.">
+<meta property="og:title" content="MD Tofazzal Hosein | PHP &amp; MySQL Web Developer">
+<meta property="og:description" content="Fast, secure, database-driven websites and web apps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F8FB;--surface:#FFFFFF;--ink:#0D1B2A;--muted:#52607A;--line:#DDE3EE;--accent:#1E5BFF;--accent-ink:#FFFFFF;--ok:#12A150}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1220;--surface:#111A2E;--ink:#EAF0FF;--muted:#9BA8C4;--line:#22304D;--accent:#6C93FF;--accent-ink:#0B1220;--ok:#34D399}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(36px,6.2vw,64px);font-weight:700}
+h2{font-size:clamp(28px,4vw,38px);font-weight:700;margin-bottom:36px}
+h3{font-size:20px;font-weight:500;letter-spacing:-.01em}
+p{margin:0}
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Space Grotesk",sans-serif;font-weight:700;text-decoration:none;font-size:18px}
+.nav{display:flex;gap:26px;align-items:center;font-size:15px;color:var(--muted)}
+.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+.btn{display:inline-block;padding:13px 24px;border-radius:8px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--accent);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.hero{padding:72px 0 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin-bottom:22px}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--ok);display:block}
+.hero p.lead{font-size:19px;color:var(--muted);margin:22px 0 32px;max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.code{background:#0B1424;border:1px solid #22304D;border-radius:14px;overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:13.5px;line-height:1.75;color:#EAF0FF;box-shadow:0 24px 60px -24px rgba(13,27,42,.55)}
+.code .bar{padding:11px 18px;border-bottom:1px solid #22304D;color:#8A99B8;font-size:12.5px;display:flex;justify-content:space-between}
+.code pre{margin:0;padding:18px;overflow-x:auto}
+.ln{display:block;opacity:0;animation:ln .35s ease forwards;animation-delay:calc(var(--i)*.32s + .5s);white-space:pre}
+@keyframes ln{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+.k{color:#7AA2FF}.s{color:#6EE7C7}.c{color:#6B7A99}.v{color:#FFD479}
+section{padding:80px 0;border-top:1px solid var(--line)}
+.rows>div{display:grid;grid-template-columns:260px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+.rows>div:first-child{border-top:0;padding-top:0}
+.rows p{color:var(--muted);max-width:58ch}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.skills h3{margin-bottom:12px;font-size:17px;color:var(--muted);font-weight:500}
+.skills ul{list-style:none;margin:0;padding:0}
+.skills li{padding:9px 0;border-top:1px solid var(--line);font-weight:500}
+.proj{display:grid;grid-template-columns:1fr auto;gap:20px 32px;padding:30px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj p{color:var(--muted);margin:8px 0 12px;max-width:58ch}
+.tag{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent)}
+.links{display:flex;flex-direction:column;gap:10px;align-items:flex-start;font-size:15px;font-weight:600}
+.links a{color:var(--accent);text-decoration:none;border-bottom:2px solid transparent}
+.links a:hover{border-color:var(--accent)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--accent);padding-top:16px}
+.steps li::before{content:"Step " counter(s);display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
+.steps b{display:block;font-family:"Space Grotesk",sans-serif;font-size:19px;margin-bottom:6px}
+.steps span{color:var(--muted);font-size:16px;line-height:1.6;display:block}
+.contact{text-align:left}
+.contact p.big{font-size:19px;color:var(--muted);max-width:52ch;margin-bottom:28px}
+.contact .elsewhere{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;font-weight:600}
+.contact .elsewhere a{color:var(--accent);text-decoration:none}
+footer{padding:28px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media (max-width:820px){
+.hero{grid-template-columns:1fr;padding:48px 0 56px;gap:36px}
+.rows>div{grid-template-columns:1fr;gap:6px}
+.skills{grid-template-columns:1fr;gap:24px}
+.steps{grid-template-columns:1fr 1fr}
+.proj{grid-template-columns:1fr}
+.nav a.hide{display:none}
+section{padding:60px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ln{opacity:1;animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+<a class="logo" href="#top">Tofazzal Hosein</a>
+<nav class="nav" aria-label="Main">
+<a class="hide" href="#services">Services</a><a class="hide" href="#skills">Skills</a><a class="hide" href="#projects">Projects</a><a class="btn main" style="padding:8px 18px;font-size:15px;color:var(--accent-ink)" href="#contact">Contact</a>
+</nav>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<div class="status"><i></i>Available for freelance projects</div>
+<h1>I build fast, secure websites with PHP and MySQL.</h1>
+<p class="lead">Hi, I’m MD Tofazzal Hosein, a web developer from Bangladesh. I turn business ideas into database-driven websites, admin panels and web apps that are easy to manage.</p>
+<div class="btns"><a class="btn main" href="#projects">View projects</a><a class="btn ghost" href="mailto:adnanmahmud3569@gmail.com">Email me</a></div>
+</div>
+<div class="code" aria-label="PHP login code sample">
+<div class="bar"><span>login.php</span><span>PHP + MySQL</span></div>
+<pre><code><span class="ln" style="--i:0"><span class="k">&lt;?php</span></span><span class="ln" style="--i:1"><span class="v">$stmt</span> = <span class="v">$pdo</span>-&gt;<span class="k">prepare</span>(</span><span class="ln" style="--i:2">  <span class="s">"SELECT * FROM users WHERE email = ?"</span></span><span class="ln" style="--i:3">);</span><span class="ln" style="--i:4"><span class="v">$stmt</span>-&gt;<span class="k">execute</span>([<span class="v">$email</span>]);</span><span class="ln" style="--i:5"><span class="v">$user</span> = <span class="v">$stmt</span>-&gt;<span class="k">fetch</span>();</span><span class="ln" style="--i:6"> </span><span class="ln" style="--i:7"><span class="k">if</span> (<span class="k">password_verify</span>(<span class="v">$pass</span>, <span class="v">$user</span>[<span class="s">'hash'</span>])) {</span><span class="ln" style="--i:8">  <span class="v">$_SESSION</span>[<span class="s">'user'</span>] = <span class="v">$user</span>[<span class="s">'id'</span>];</span><span class="ln" style="--i:9">  <span class="c">// logged in securely</span></span><span class="ln" style="--i:10">}</span></code></pre>
+</div>
+</div>
+
+<section id="services"><div class="wrap">
+<h2>What I can build for you</h2>
+<div class="rows">
+<div><h3>Custom websites</h3><p>Business websites built to load fast and look right on phones, tablets and desktops.</p></div>
+<div><h3>Admin panels</h3><p>Dashboards where you can manage content, users and orders without touching any code.</p></div>
+<div><h3>Login and user systems</h3><p>Secure registration, login and sessions, with passwords that are properly hashed.</p></div>
+<div><h3>Fixes and new features</h3><p>Bug fixing, speeding up slow pages, and adding features to an existing PHP website.</p></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Backend</h3><ul><li>PHP</li><li>MySQL and SQL</li><li>Database design</li></ul></div>
+<div><h3>Frontend</h3><ul><li>HTML and CSS</li><li>JavaScript</li><li>jQuery</li></ul></div>
+<div><h3>How I work</h3><ul><li>Clear communication</li><li>On-time delivery</li><li>Clean, readable code</li></ul></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<div class="proj">
+<div><h3>Login and registration system</h3><p>User sign-up and login with hashed passwords, sessions and input validation.</p><span class="tag">PHP, MySQL, jQuery</span></div>
+<div class="links"><a href="https://github.com/YOUR-USERNAME/php-login-system">Source code</a><a href="#">Live demo</a></div>
+</div>
+<div class="proj">
+<div><h3>Student management app</h3><p>Add, edit, delete and search records, with live search powered by jQuery.</p><span class="tag">PHP, MySQL, JavaScript</span></div>
+<div class="links"><a href="https://github.com/YOUR-USERNAME/student-management-php">Source code</a><a href="#">Live demo</a></div>
+</div>
+<div class="proj">
+<div><h3>Business website with admin panel</h3><p>Responsive company website with a contact form and an admin area to manage content.</p><span class="tag">PHP, MySQL, CSS</span></div>
+<div class="links"><a href="https://github.com/YOUR-USERNAME/business-website-php">Source code</a><a href="#">Live demo</a></div>
+</div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>How we work together</h2>
+<ol class="steps">
+<li><b>Share your idea</b><span>Tell me what you need, your timeline and your budget.</span></li>
+<li><b>Get a plan</b><span>I send a clear scope, delivery date and fair price.</span></li>
+<li><b>Build with updates</b><span>You see progress along the way, so there are no surprises.</span></li>
+<li><b>Delivery and support</b><span>I deliver on time and fix any issues that come up.</span></li>
+</ol>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Have a project in mind?</h2>
+<p class="big">Send me a short description of what you need. I usually reply within 24 hours with questions or a plan.</p>
+<a class="btn main" href="mailto:adnanmahmud3569@gmail.com">adnanmahmud3569@gmail.com</a>
+<div class="elsewhere"><a href="https://www.upwork.com/freelancers/YOUR-PROFILE">Upwork</a><a href="https://github.com/YOUR-USERNAME">GitHub</a><a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 MD Tofazzal Hosein. All rights reserved.</div></footer>
+</body>
+</html>
